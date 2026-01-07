@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article>
+  <header class="post-header">
+    <div class="post-date">{{ page.date | date: "%A, %B %d, %Y" }}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.tags.size > 0 %}
+    <div class="post-meta">
+      {% for tag in page.tags %}
+      <span class="stat">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <nav style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.9rem;">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.date | date: "%Y-%m-%d" }}</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}">{{ page.next.date | date: "%Y-%m-%d" }} &rarr;</a>
+    {% endif %}
+  </nav>
+</article>
