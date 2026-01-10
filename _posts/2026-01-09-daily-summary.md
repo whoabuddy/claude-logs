@@ -7,29 +7,30 @@ tags: [commits, github]
 
 # Daily Summary - 2026-01-09
 
-> Last updated: 2026-01-09 14:50 CST
+> Last updated: 2026-01-09 17:00 CST
 
 ## At a Glance
 
 | Commits | Repos | Issues | PRs | Reviews | Comments |
 |:-------:|:-----:|:------:|:---:|:-------:|:--------:|
-| 15 | 7 | 1 | 1 | 0 | 0 |
+| 22 | 8 | 1 | 1 | 0 | 0 |
 
 ## Highlights
 
-Built out the x402Stacks payment infrastructure across three repos: the API host now proxies to OpenRouter with x402 payment verification and usage tracking, while the sponsor relay enables gasless transactions. Contributed upstream to coinbase/x402 with ecosystem entries. Fixed Cloudflare deployment issues on the landing page and added authentication to worker-logs.
+Built out the x402Stacks payment infrastructure across three repos: API host with OpenRouter proxy and x402 payment verification, sponsor relay for gasless transactions, and upstream contributions to coinbase/x402. Major improvements to claude-knowledge: renamed ralph to sprout-docs, updated daily skill with GitHub Events API, added shared CLAUDE.md reference and setup skill for team onboarding. Updated daily summary format with At a Glance table across all historical logs.
 
 ## Commits
 
 | Repo | Commits | Focus |
 |------|:-------:|-------|
 | aibtcdev/x402Stacks-api-host | 4 | OpenRouter proxy with x402 payment verification and streaming usage tracking |
-| aibtcdev/x402Stacks-sponsor-relay | 3 | Sponsor relay endpoint for gasless STX transactions |
+| aibtcdev/x402Stacks-sponsor-relay | 4 | Sponsor relay endpoint for gasless STX transactions, staging route |
+| whoabuddy/claude-knowledge | 4 | Rename ralph to sprout-docs, daily skill updates, setup skill and shared CLAUDE.md |
+| whoabuddy/claude-logs | 4 | Daily summaries with new At a Glance format |
 | aibtcdev/landing-page | 3 | Deployment fixes: Pages to Workers migration, nodejs_compat flag |
 | coinbase/x402 | 1 | Added x402StacksScan and facilitator to ecosystem |
 | tony1908/x402Stacks | 1 | Sponsored transaction support |
 | whoabuddy/worker-logs | 1 | Auth via Cloudflare Access on public endpoints |
-| whoabuddy/claude-logs | 2 | Daily summary + format update |
 
 Added: williamkapke/MadameClaude
 
