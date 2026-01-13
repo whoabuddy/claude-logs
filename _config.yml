@@ -9,6 +9,7 @@ repository: pbtc21/claude-logs
 markdown: kramdown
 permalink: /:year/:month/:day/
 timezone: America/Los_Angeles
+future: true
 
 # Plugins (GitHub Pages compatible)
 plugins:
