@@ -133,6 +133,10 @@ for date, day_commits in sorted(by_date.items(), reverse=True):
     dt = datetime.fromisoformat(date)
     formatted_date = dt.strftime("%B %d, %Y")
 
+    # Generate highlights from commit messages
+    all_subjects = [c['subject'] for c in day_commits]
+    repos_touched = list(day_by_repo.keys())
+
     content = f"""---
 title: "{formatted_date}"
 date: {date}
@@ -142,14 +146,38 @@ commits: {len(day_commits)}
 repos: {len(day_by_repo)}
 ---
 
-**{len(day_commits)} commits** across **{len(day_by_repo)} repos**
+# Daily Summary - {formatted_date}
+
+> Last updated: {datetime.now(PST).strftime('%Y-%m-%d %H:%M PST')}
+
+## Highlights
+
+Worked on {len(day_by_repo)} project{'s' if len(day_by_repo) > 1 else ''}: {', '.join(r.split('/')[-1] for r in repos_touched)}.
 
 <!--more-->
+
+## Commits
+
+| Repo | Count | Summary |
+|------|-------|---------|
+"""
+
+    for repo, repo_commits in sorted(day_by_repo.items(), key=lambda x: -len(x[1])):
+        # Get first commit message as summary
+        summary = repo_commits[0]['subject'][:50]
+        if len(repo_commits[0]['subject']) > 50:
+            summary += '...'
+        content += f"| {repo} | {len(repo_commits)} | {summary} |\n"
+
+    content += f"""
+**Total: {len(day_commits)} commits across {len(day_by_repo)} repositories**
+
+## Details
 
 """
 
     for repo, repo_commits in sorted(day_by_repo.items()):
-        content += f"## {repo}\n\n"
+        content += f"### {repo}\n\n"
         for c in sorted(repo_commits, key=lambda x: x['date_pst'], reverse=True):
             time = c['time_only']
             subject = c['subject']
