@@ -1,8 +1,8 @@
 {
-  "total_commits": 316,
-  "total_repos": 33,
-  "total_days": 13,
-  "last_updated": "2026-01-10T00:52:47.265495",
+  "total_commits": 341,
+  "total_repos": 39,
+  "total_days": 17,
+  "last_updated": "2026-01-13T00:59:22.982708",
   "repos": [
     {
       "name": "whoabuddy/stx402",
@@ -10,11 +10,11 @@
     },
     {
       "name": "whoabuddy/claude-knowledge",
-      "commits": 21
+      "commits": 24
     },
     {
       "name": "personal/sbtc-yield-vault",
-      "commits": 14
+      "commits": 16
     },
     {
       "name": "dev/claude-logs",
@@ -29,19 +29,23 @@
       "commits": 9
     },
     {
+      "name": "personal/pothole-reporter",
+      "commits": 8
+    },
+    {
       "name": "aibtc/aibtcdev-backend",
       "commits": 8
     },
     {
-      "name": "personal/stx402-alpha",
-      "commits": 6
-    },
-    {
-      "name": "personal/pothole-reporter",
-      "commits": 6
-    },
-    {
       "name": "personal/x402-registry",
+      "commits": 7
+    },
+    {
+      "name": "personal/airdrop-cannon",
+      "commits": 6
+    },
+    {
+      "name": "personal/stx402-alpha",
       "commits": 6
     },
     {
@@ -63,6 +67,14 @@
     {
       "name": "personal/coin-refill",
       "commits": 5
+    },
+    {
+      "name": "personal/claude-logs",
+      "commits": 4
+    },
+    {
+      "name": "personal/sbtc-yield-stream",
+      "commits": 4
     },
     {
       "name": "personal/sbtc-print",
@@ -95,6 +107,18 @@
     {
       "name": "personal/stacks-endpoint-deployer",
       "commits": 2
+    },
+    {
+      "name": "personal/contract-scout",
+      "commits": 1
+    },
+    {
+      "name": "personal/token-health",
+      "commits": 1
+    },
+    {
+      "name": "personal/pratt-mayor",
+      "commits": 1
     },
     {
       "name": "examples/trading-agent",
