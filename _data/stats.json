@@ -1,8 +1,8 @@
 {
-  "total_commits": 357,
+  "total_commits": 361,
   "total_repos": 41,
-  "total_days": 17,
-  "last_updated": "2026-01-14T05:29:16.999424",
+  "total_days": 18,
+  "last_updated": "2026-01-15T01:06:14.071178",
   "repos": [
     {
       "name": "whoabuddy/stx402",
@@ -10,19 +10,19 @@
     },
     {
       "name": "whoabuddy/claude-knowledge",
-      "commits": 25
+      "commits": 27
     },
     {
       "name": "personal/sbtc-yield-vault",
       "commits": 16
     },
     {
-      "name": "dev/claude-logs",
+      "name": "personal/bitcoin-democracy",
       "commits": 14
     },
     {
-      "name": "personal/bitcoin-democracy",
-      "commits": 12
+      "name": "dev/claude-logs",
+      "commits": 14
     },
     {
       "name": "aibtc/erc-8004-stacks",
