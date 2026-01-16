@@ -1,12 +1,12 @@
 # Daily Summary - 2026-01-15
 
-> Last updated: 2026-01-15 22:41 UTC
+> Last updated: 2026-01-15 23:15 UTC
 
 ## At a Glance
 
 | Commits | Repos | Issues | PRs | Reviews | Comments |
 |:-------:|:-----:|:------:|:---:|:-------:|:--------:|
-| 27 | 7 | 0 | 13 | 1 | 5 |
+| 34 | 8 | 0 | 13 | 1 | 5 |
 
 ## Deployments
 
@@ -27,13 +27,14 @@ Major dashboard overhaul for the worker-logs service with unified view and advan
 |------|:-------:|-------|
 | absorbingchaos/cottontails | 7 | Branding overhaul (logos, favicon), admin functionality, Turnstile CAPTCHA, location field for inquiries |
 | aibtcdev/worker-logs | 6 | Dashboard overhaul with unified view and filtering, admin delete feature, KV namespace config fix |
-| aibtcdev/x402-api | 1 | Added LOGS service binding for centralized logging |
-| aibtcdev/x402-sponsor-relay | 2 | Public dashboard for relay statistics |
-| boomcrypto/citycoins-ui-v2 | 7 | Claims dashboard with on-chain verification, cycle calculation fixes, 429 rate limit handling |
+| aibtcdev/x402-api | 3 | LOGS service binding for centralized logging, AIBTC dashboard branding, PR feedback fixes |
+| aibtcdev/x402-sponsor-relay | 3 | Public dashboard for relay statistics with AIBTC branding |
+| boomcrypto/citycoins-ui-v2 | 10 | Claims dashboard with on-chain verification, cycle calculation fixes, 429 rate limit handling, stacking rewards endpoint fix |
+| whoabuddy/claude-logs | 1 | Daily summary for 2026-01-15 |
 | whoabuddy/stx402 | 1 | Improved logging across endpoints |
 | whoabuddy/worker-logs | 3 | Dashboard overhaul and admin delete feature (upstream sync) |
 
-Added: citycoins/scripts
+Added: citycoins/api, citycoins/protocol-api
 
 ## GitHub Activity
 
