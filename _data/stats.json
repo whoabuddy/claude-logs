@@ -1,8 +1,8 @@
 {
-  "total_commits": 397,
-  "total_repos": 47,
-  "total_days": 20,
-  "last_updated": "2026-01-18T04:57:58.242845",
+  "total_commits": 403,
+  "total_repos": 52,
+  "total_days": 22,
+  "last_updated": "2026-01-20T00:22:21.237932",
   "repos": [
     {
       "name": "whoabuddy/stx402",
@@ -109,6 +109,10 @@
       "commits": 3
     },
     {
+      "name": "personal/nft-forge",
+      "commits": 2
+    },
+    {
       "name": "personal/stx-rain",
       "commits": 2
     },
@@ -135,6 +139,22 @@
     {
       "name": "personal/stacks-endpoint-deployer",
       "commits": 2
+    },
+    {
+      "name": "personal/btc-oracle",
+      "commits": 1
+    },
+    {
+      "name": "personal/rain-machine",
+      "commits": 1
+    },
+    {
+      "name": "personal/stacks-btc-showcase",
+      "commits": 1
+    },
+    {
+      "name": "personal/desert-derby",
+      "commits": 1
     },
     {
       "name": "personal/x402-stacks",
