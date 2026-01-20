@@ -23,35 +23,35 @@ Monday session kicking off the week. Major push on x402 protocol documentation a
 
 | Repo | Commits | Focus |
 |------|:-------:|-------|
-| aibtcdev/x402-crosschain-example | 11 | New repo with complete cross-chain x402 integration guide - Hono server, Mermaid diagrams, network version support matrix |
-| boomcrypto/citycoins-ui-v2 | 5 | Performance optimizations for large transaction datasets, auto-fetch on page load, key verification caching |
-| x402Stacks/x402-stacks-facilitator | 3 | Coinbase x402 compatibility adapter, normalized address comparison, route registration |
-| aibtcdev/x402-sponsor-relay | 2 | Fixed test script addresses, updated docs with missing endpoints |
-| whoabuddy/claude-knowledge | 1 | Added react-perf skill and agent to Claude config |
+| [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example) | 11 | New repo with complete cross-chain x402 integration guide - Hono server, Mermaid diagrams, network version support matrix |
+| [boomcrypto/citycoins-ui-v2](https://github.com/boomcrypto/citycoins-ui-v2) | 5 | Performance optimizations for large transaction datasets, auto-fetch on page load, key verification caching |
+| [x402Stacks/x402-stacks-facilitator](https://github.com/x402Stacks/x402-stacks-facilitator) | 3 | Coinbase x402 compatibility adapter, normalized address comparison, route registration |
+| [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | 2 | Fixed test script addresses, updated docs with missing endpoints |
+| [whoabuddy/claude-knowledge](https://github.com/whoabuddy/claude-knowledge) | 1 | Added react-perf skill and agent to Claude config |
 
-**Added repos:** aibtcdev/x402-crosschain-example, biwasxyz/stx402-agent, vercel-labs/agent-skills, x402Stacks/x402-stacks-sdk
+**Added repos:** [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example), [biwasxyz/stx402-agent](https://github.com/biwasxyz/stx402-agent), [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills), [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk)
 
 ## GitHub Activity
 
 | Type | Repo | # | Description |
 |------|------|:-:|-------------|
-| Issue Created | aibtcdev/x402-sponsor-relay | 16 | Add API key authentication for external applications |
-| Issue Created | x402Stacks/x402-stacks-sdk | 1 | Add sponsor relay support for gasless transactions |
-| Issue Created | aibtcdev/x402-crosschain-example | 1 | Update docs and examples for facilitator v2 endpoints |
-| Issue Created | aibtcdev/landing-page | 23 | Merge design into single page |
-| PR Opened | aibtcdev/x402-sponsor-relay | 15 | fix: use valid AIBTC recipient addresses in test script |
-| PR Opened | aibtcdev/x402-sponsor-relay | 14 | docs: update documentation with missing endpoints and fix version |
-| PR Opened | x402Stacks/x402-stacks-facilitator | 2 | feat: add Coinbase x402 compatibility adapter layer |
-| Review | aibtcdev/landing-page | 22 | approved |
+| Issue Created | [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | [#16](https://github.com/aibtcdev/x402-sponsor-relay/issues/16) | Add API key authentication for external applications |
+| Issue Created | [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) | [#1](https://github.com/x402Stacks/x402-stacks-sdk/issues/1) | Add sponsor relay support for gasless transactions |
+| Issue Created | [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example) | [#1](https://github.com/aibtcdev/x402-crosschain-example/issues/1) | Update docs and examples for facilitator v2 endpoints |
+| Issue Created | [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | [#23](https://github.com/aibtcdev/landing-page/issues/23) | Merge design into single page |
+| PR Opened | [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | [#15](https://github.com/aibtcdev/x402-sponsor-relay/pull/15) | fix: use valid AIBTC recipient addresses in test script |
+| PR Opened | [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | [#14](https://github.com/aibtcdev/x402-sponsor-relay/pull/14) | docs: update documentation with missing endpoints and fix version |
+| PR Opened | [x402Stacks/x402-stacks-facilitator](https://github.com/x402Stacks/x402-stacks-facilitator) | [#2](https://github.com/x402Stacks/x402-stacks-facilitator/pull/2) | feat: add Coinbase x402 compatibility adapter layer |
+| Review | [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | [#22](https://github.com/aibtcdev/landing-page/pull/22) | approved |
 
 ## Other Activity
 
-- Forked: x402Stacks/x402-stacks-sdk -> aibtcdev/x402-stacks-sdk
-- Branch: aibtcdev/x402-sponsor-relay `fix/test-relay-recipient`
-- Branch: aibtcdev/x402-sponsor-relay `docs/update-missing-endpoints`
-- Branch: aibtcdev/x402-crosschain-example `main`
-- Branch: aibtcdev/x402-stacks-facilitator `feature/coinbase-compat`
-- External: aibtcdev/x402-stacks-facilitator, boomcrypto/citycoins2
+- Forked: [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) -> [aibtcdev/x402-stacks-sdk](https://github.com/aibtcdev/x402-stacks-sdk)
+- Branch: [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay/tree/fix/test-relay-recipient) `fix/test-relay-recipient`
+- Branch: [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay/tree/docs/update-missing-endpoints) `docs/update-missing-endpoints`
+- Branch: [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example/tree/main) `main`
+- Branch: [aibtcdev/x402-stacks-facilitator](https://github.com/aibtcdev/x402-stacks-facilitator/tree/feature/coinbase-compat) `feature/coinbase-compat`
+- External: [aibtcdev/x402-stacks-facilitator](https://github.com/aibtcdev/x402-stacks-facilitator), [boomcrypto/citycoins2](https://github.com/boomcrypto/citycoins2)
 
 ## Notes
 
