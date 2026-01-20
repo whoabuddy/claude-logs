@@ -29,12 +29,12 @@ Monday session kicking off the week. Major push on x402 protocol documentation -
 
 ### Added Repos
 
-| Repo | Purpose |
-|------|---------|
-| [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example) | New repo - cross-chain x402 integration guide and reference implementation |
-| [biwasxyz/stx402-agent](https://github.com/biwasxyz/stx402-agent) | Exploring agent patterns for x402 payments |
-| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | Reference for skill/plugin architecture patterns |
-| [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) | Forked to aibtcdev for gasless transaction support |
+| Repo | Type | Purpose |
+|------|------|---------|
+| [aibtcdev/x402-crosschain-example](https://github.com/aibtcdev/x402-crosschain-example) | Created | Cross-chain x402 integration guide and reference implementation |
+| [biwasxyz/stx402-agent](https://github.com/biwasxyz/stx402-agent) | Cloned | Exploring agent patterns for x402 payments |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | Cloned | Reference for skill/plugin architecture patterns |
+| [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) | Forked | Gasless transaction support |
 
 ## Open Threads
 
