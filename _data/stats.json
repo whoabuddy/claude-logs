@@ -1,8 +1,8 @@
 {
-  "total_commits": 414,
-  "total_repos": 53,
-  "total_days": 23,
-  "last_updated": "2026-01-21T01:02:05.027408",
+  "total_commits": 434,
+  "total_repos": 56,
+  "total_days": 24,
+  "last_updated": "2026-01-22T06:20:28.124722",
   "repos": [
     {
       "name": "whoabuddy/stx402",
@@ -10,7 +10,7 @@
     },
     {
       "name": "whoabuddy/claude-knowledge",
-      "commits": 40
+      "commits": 43
     },
     {
       "name": "dev/claude-logs",
@@ -25,16 +25,16 @@
       "commits": 16
     },
     {
-      "name": "personal/pothole-reporter",
+      "name": "aibtc/aibtcdev-backend",
       "commits": 12
     },
     {
       "name": "aibtc/erc-8004-stacks",
-      "commits": 9
+      "commits": 12
     },
     {
-      "name": "aibtc/aibtcdev-backend",
-      "commits": 8
+      "name": "personal/pothole-reporter",
+      "commits": 12
     },
     {
       "name": "personal/airdrop-cannon",
@@ -43,6 +43,10 @@
     {
       "name": "personal/x402-registry",
       "commits": 7
+    },
+    {
+      "name": "aibtc/yield-hunter",
+      "commits": 6
     },
     {
       "name": "personal/btc-oracle",
@@ -97,6 +101,10 @@
       "commits": 4
     },
     {
+      "name": "aibtc/aibtcdev-frontend",
+      "commits": 3
+    },
+    {
       "name": "personal/token-health",
       "commits": 3
     },
@@ -147,6 +155,10 @@
     {
       "name": "personal/stacks-endpoint-deployer",
       "commits": 2
+    },
+    {
+      "name": "aibtc/bitcoin-agents-mcp-server",
+      "commits": 1
     },
     {
       "name": "personal/rain-machine",
