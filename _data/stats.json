@@ -1,8 +1,8 @@
 {
-  "total_commits": 434,
+  "total_commits": 447,
   "total_repos": 56,
-  "total_days": 24,
-  "last_updated": "2026-01-22T06:20:28.124722",
+  "total_days": 25,
+  "last_updated": "2026-01-23T03:22:40.484964",
   "repos": [
     {
       "name": "whoabuddy/stx402",
@@ -10,7 +10,7 @@
     },
     {
       "name": "whoabuddy/claude-knowledge",
-      "commits": 43
+      "commits": 47
     },
     {
       "name": "dev/claude-logs",
@@ -23,6 +23,10 @@
     {
       "name": "personal/sbtc-yield-vault",
       "commits": 16
+    },
+    {
+      "name": "aibtc/yield-hunter",
+      "commits": 15
     },
     {
       "name": "aibtc/aibtcdev-backend",
@@ -43,10 +47,6 @@
     {
       "name": "personal/x402-registry",
       "commits": 7
-    },
-    {
-      "name": "aibtc/yield-hunter",
-      "commits": 6
     },
     {
       "name": "personal/btc-oracle",
