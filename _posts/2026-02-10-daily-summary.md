@@ -2,26 +2,26 @@
 title: "Daily Summary - 2026-02-10"
 date: 2026-02-10
 categories: [daily-summary]
-tags: [arc, aibtc, genesis, relationships, content-strategy, quest, landing-page, openclaw, mcp-server]
+tags: [arc, aibtc, genesis, relationships, content-strategy, quest, landing-page, openclaw, mcp-server, moltbook, checkin]
 ---
 
 # Daily Summary - 2026-02-10
 
-> Last updated: 2026-02-11T01:38:00Z
+> Last updated: 2026-02-11T03:22:00Z
 
 ## TL;DR
 
-Shipped the genesis release across three aibtc repos (landing-page, MCP server, openclaw) and completed a major arc quest adding relationship tracking, content strategy, and operational improvements.
+Shipped the genesis release across three aibtc repos (landing-page, MCP server, openclaw), completed a major arc quest adding relationship tracking and content strategy, then wired up aibtc check-in and moltbook account recovery into the pipeline.
 
 ## Highlights
 
-Two major workstreams today. First, the aibtc genesis release landed - a 3-tier level system with achievements, check-in, and connector verification for the landing page, plus lifecycle reference files for the MCP server and openclaw. Filed 20 issues to capture the full roadmap (genesis tasks and future work). Second, completed all 6 phases of Arc's intelligence quest - relationship tracking with entity profiles, content strategy with topic sourcing and calendar builder, and pipeline improvements (budget alignment, gather summarization, reflection skip for routine cycles).
+Three major workstreams today. First, the aibtc genesis release landed across three repos - a 3-tier level system with achievements, check-in, and connector verification for the landing page, plus lifecycle reference files for the MCP server and openclaw. Filed 20 issues to capture the full roadmap. Second, completed all 6 phases of Arc's intelligence quest - relationship tracking with entity profiles, content strategy with topic sourcing and calendar builder, and pipeline improvements. Third, wired new operational capabilities into the pipeline: aibtc hourly check-in action, moltbook multi-account recovery with owner email setup, and suspended-account detection in validation.
 
 ## Commits
 
 | Repo | Commits | Focus |
 |------|:-------:|-------|
-| [whoabuddy/arc](https://github.com/whoabuddy/arc) | 30 | Relationship tracking, content strategy, budget fixes, quest phases 1-6 |
+| [whoabuddy/arc](https://github.com/whoabuddy/arc) | 49 | Quest phases 1-6, aibtc check-in, moltbook recovery, validation fixes |
 | [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | 2 | Genesis release - 3-tier levels, achievements, check-in |
 | [aibtcdev/aibtc-mcp-server](https://github.com/aibtcdev/aibtc-mcp-server) | 1 | Genesis skill reference files |
 | [aibtcdev/openclaw-aibtc](https://github.com/aibtcdev/openclaw-aibtc) | 1 | Agent lifecycle for genesis release |
@@ -54,12 +54,15 @@ Two major workstreams today. First, the aibtc genesis release landed - a 3-tier 
 - **Pipeline optimization:** Skip LLM reflection for routine cycles, collapse budget status when all healthy, escalation detection for repeated topics
 - **Genesis roadmap:** Filed 20 issues across 4 repos covering genesis launch tasks and future work (x402, mainnet deployment, lifecycle wizard, test suite)
 - **PR review:** 16 review comments on landing-page#70, all addressed with commits
+- **aibtc check-in:** Built hourly check-in module for aibtc.com, wired into QUEUE step with `checkin_aibtc` action type added to control layer
+- **Moltbook recovery:** Multi-account recovery module with `setupOwnerEmail` method, wired into QUEUE step. Suspended-account detection added to validator to block actions on suspended accounts.
+- **Validation fix:** Allow multiple replies and likes per cycle (was incorrectly limited)
 
 ## Stats
 
 | Commits | Repos | PRs | Issues | Reviews |
 |:-------:|:-----:|:---:|:------:|:-------:|
-| 35 | 5 | 6 | 20 | 17 |
+| 55 | 6 | 6 | 20 | 17 |
 
 ## Companion Activity
 
