@@ -2,36 +2,41 @@
 title: "Daily Summary - 2026-02-16"
 date: 2026-02-16
 categories: [daily-summary]
-tags: [commits, github, x402, aibtc-mcp-server, landing-page, openclaw-aibtc, x402-api, stx402, x402-sponsor-relay, erc-8004, arc, docs, genesis-testing]
+tags: [commits, github, x402, aibtc-mcp-server, landing-page, openclaw-aibtc, x402-api, stx402, x402-sponsor-relay, arc, arc0me, arc-starter, genesis-testing, docs]
 ---
 
 # Daily Summary - 2026-02-16
 
-> Last updated: 2026-02-16T22:30Z
+> Last updated: 2026-02-16T22:50Z
 
 ## TL;DR
 
-The biggest single-day output yet — 50 commits across 11 repos, 20 PRs merged, 28 issues filed, 18 closed. x402 payments hardened end-to-end (probe-before-pay, balance pre-checks, retry logic), the AIBTC landing page got a docs architecture overhaul and profile polish, OpenClaw shipped Docker CI/CD with vulnerability scanning, and Arc's own infrastructure got production cutover and cost tracking. All of this work was done with Claude Code.
+162 commits across 14 repos. 22 PRs merged. 19 issues filed, 18 closed. x402 payments hardened end-to-end, AIBTC landing page got a docs architecture overhaul, OpenClaw shipped Docker CI/CD, Arc's infrastructure went from research to production — server, site, blog, cost tracking, content negotiation, and signed content all live. Arc published arc-starter as its first open-source repo and launched arc0.me with cryptographically signed blog posts.
 
 ## Highlights
 
-Today was an x402 reliability marathon. The MCP server got probe-before-pay flow, sBTC balance pre-checks, fee clamping, and retry logic — all driven by real failures discovered during genesis agent testing. Agents were burning STX on failed sBTC transfers and choking on v2 manifest parsing. Every fix landed with PR review feedback addressed inline. The landing page evolved from raw docs to a structured `/docs/[topic]` architecture with sub-documents for messaging, identity, and MCP tools. OpenClaw got proper CI/CD — Docker images now publish to ghcr.io with Trivy vulnerability scanning, and release-please handles semver. Arc v2 server went live as a long-running systemd service, and cost tracking infrastructure went from zero to full margin visibility ($22.94 tracked across 2,793 API calls). The x402-sponsor-relay gained SIP-018 signature verification for agent authentication.
+This was an everything-ships day. The x402 stack got probe-before-pay, balance pre-checks, fee clamping, retry logic, and SIP-018 agent authentication — all driven by real failures during genesis agent testing. The AIBTC landing page evolved to a `/docs/[topic]` architecture with progressive disclosure. OpenClaw got proper CI/CD with ghcr.io publishing and Trivy vulnerability scanning.
+
+Arc's own infrastructure was the other half of the story: 112 commits covering the v2 server architecture (long-running systemd service with event bus, scheduler, Discord bot), arc0.me site launch (Starlight + Cloudflare Workers with content negotiation — HTML for browsers, markdown for agents, JSON+signatures for APIs), cost tracking from zero to full margin visibility, a thinking dispatcher with focused agents, and the engagement fix quest that tuned outreach cadence and AIBTC feed context. Arc also forked 7 repos for research (agent-zero, openclaw, ironclaw, picoclaw, claude-code, awesome-ai-agents, awesome-openrouter) and published arc-starter.
 
 ## Commits
 
 | Repo | Commits | Focus |
 |------|:-------:|-------|
-| [aibtcdev/openclaw-aibtc](https://github.com/aibtcdev/openclaw-aibtc) | 14 | Docker CI/CD with ghcr.io publishing, Trivy vulnerability scanning, release-please, pre-built image setup, README expansion, entrypoint hardening |
-| [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | 12 | `/docs/[topic]` route architecture, llms-full.txt slimmed from 2100→635 lines, agent.json updated, homepage/profile polish, API caching, genesis cleanup, proactive achievements, activity ranking |
-| [aibtcdev/aibtc-mcp-server](https://github.com/aibtcdev/aibtc-mcp-server) | 7 | Probe-before-pay x402 flow, sBTC balance pre-checks, v2 manifest parsing, fee clamping, retry logic, version detection for stale npx cache, test coverage for pre-payment validation |
-| [whoabuddy/stx402](https://github.com/whoabuddy/stx402) | 6 | x402 V2 manifest generator, `.well-known` endpoint updated, 120s timeout patch for x402-stacks, code hardening (security, DRY, performance) |
+| [arc](https://github.com/whoabuddy/arc) | 112 | v2 server architecture, arc0.me site launch with content negotiation and signed blog, dispatcher pattern with focused agents, cost tracking infrastructure, engagement fix quest, research docs |
+| [aibtcdev/openclaw-aibtc](https://github.com/aibtcdev/openclaw-aibtc) | 16 | Docker CI/CD with ghcr.io publishing, Trivy vulnerability scanning, release-please, pre-built image setup, README expansion, entrypoint hardening |
+| [aibtcdev/aibtc-mcp-server](https://github.com/aibtcdev/aibtc-mcp-server) | 10 | Probe-before-pay x402 flow, sBTC balance pre-checks, v2 manifest parsing, fee clamping, retry logic, version detection, test coverage, x402 skill docs |
+| [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | 7 | Progressive-disclosure docs architecture with topic sub-docs, discovery docs audit, homepage/profile polish, API caching, genesis cleanup, proactive achievements |
 | [aibtcdev/x402-api](https://github.com/aibtcdev/x402-api) | 4 | V2 discovery manifest, code hardening (dead code, error safety, deps, minification), verifier timeout increase |
+| [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | 4 | SIP-018 signature verification for agent authentication, retry-with-backoff for nonce fetch, fee clamping, KV TTL fix |
+| [whoabuddy/stx402](https://github.com/whoabuddy/stx402) | 3 | V2 manifest, timeout patch, code hardening (security, DRY, performance) |
 | [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) | 2 | Settlement timeout increase (30s→120s), JSDoc simplification |
 | [whoabuddy/claude-knowledge](https://github.com/whoabuddy/claude-knowledge) | 1 | Quest system consolidation (9 skills→4, 3 agents→2) |
 | [aibtcdev/worker-logs](https://github.com/aibtcdev/worker-logs) | 1 | Admin key auth for health-urls endpoint |
 | [whoabuddy/worker-logs](https://github.com/whoabuddy/worker-logs) | 1 | Admin key auth for health-urls endpoint |
-| [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | 1 | SIP-018 signature verification for agent authentication |
 | [x402Stacks/x402-stacks-facilitator](https://github.com/x402Stacks/x402-stacks-facilitator) | 1 | CLAUDE.md and folder READMEs |
+| [whoabuddy/claude-logs](https://github.com/whoabuddy/claude-logs) | 1 | Daily summary |
+| [arc/services/arc0btc-worker](https://github.com/arc0btc/arc-starter) | 1 | Initial arc-starter template |
 
 ### Added Repos
 
@@ -49,7 +54,9 @@ Today was an x402 reliability marathon. The MCP server got probe-before-pay flow
 | Merged | [aibtc-mcp-server#131](https://github.com/aibtcdev/aibtc-mcp-server/pull/131) | x402 v2 probe parsing, slow sBTC execution, payment formatting |
 | Merged | [aibtc-mcp-server#126](https://github.com/aibtcdev/aibtc-mcp-server/pull/126) | Prevent wasted payments, clamp fees, retry logic |
 | Merged | [aibtc-mcp-server#124](https://github.com/aibtcdev/aibtc-mcp-server/pull/124) | Version detection for stale npx cache |
-| Merged | [landing-page#204](https://github.com/aibtcdev/landing-page/pull/204) | Docs route with topic sub-documents |
+| Merged | [landing-page#208](https://github.com/aibtcdev/landing-page/pull/208) | Progressive-disclosure docs architecture with topic sub-docs |
+| Merged | [landing-page#206](https://github.com/aibtcdev/landing-page/pull/206) | Increase x402-stacks verifier timeout |
+| Merged | [landing-page#204](https://github.com/aibtcdev/landing-page/pull/204) | UX vs AX messaging flow clarification |
 | Merged | [landing-page#203](https://github.com/aibtcdev/landing-page/pull/203) | Discovery docs audit |
 | Merged | [landing-page#200](https://github.com/aibtcdev/landing-page/pull/200) | Homepage and profile polish |
 | Merged | [landing-page#195](https://github.com/aibtcdev/landing-page/pull/195) | Platform enhancements — caching, genesis, achievements, ranking |
@@ -59,47 +66,45 @@ Today was an x402 reliability marathon. The MCP server got probe-before-pay flow
 | Merged | [x402-api#43](https://github.com/aibtcdev/x402-api/pull/43) | V2 discovery manifest |
 | Merged | [x402-api#41](https://github.com/aibtcdev/x402-api/pull/41) | Launch readiness sweep |
 | Merged | [x402-sponsor-relay#38](https://github.com/aibtcdev/x402-sponsor-relay/pull/38) | SIP-018 agent authentication |
+| Merged | [openclaw-aibtc#21](https://github.com/aibtcdev/openclaw-aibtc/pull/21) | Docker publish workflow |
 | Merged | [openclaw-aibtc#19](https://github.com/aibtcdev/openclaw-aibtc/pull/19) | Repo cleanup |
+| Merged | [stx402#41](https://github.com/whoabuddy/stx402/pull/41) | V2 manifest and timeout patch |
 | Merged | [stx402#39](https://github.com/whoabuddy/stx402/pull/39) | Code hardening |
 | Merged | [stx402#37](https://github.com/whoabuddy/stx402/pull/37) | Pre-launch hardening |
 | Merged | [worker-logs#11](https://github.com/aibtcdev/worker-logs/pull/11) | Admin auth for health endpoint |
-| Filed | [aibtc-mcp-server#137](https://github.com/aibtcdev/aibtc-mcp-server/issues/137) | Test coverage for x402 pre-payment validation |
+| Closed | [x402-stacks-facilitator#1](https://github.com/x402Stacks/x402-stacks-facilitator/pull/1) | CLAUDE.md and folder READMEs (closed, not merged) |
 | Filed | [landing-page#201](https://github.com/aibtcdev/landing-page/issues/201) | Send message flow doesn't match spec |
 | Filed | [x402-api#42](https://github.com/aibtcdev/x402-api/issues/42) | wrangler dry run resource consumption |
 | Filed | [stx402#38](https://github.com/whoabuddy/stx402/issues/38) | wrangler dry run resource consumption |
 | Filed | [x402-sponsor-relay#40](https://github.com/aibtcdev/x402-sponsor-relay/issues/40) | Hiro API rate limiting cascading failures |
-| Filed | [landing-page#192](https://github.com/aibtcdev/landing-page/issues/192) | llms.txt / llms-full.txt inconsistencies |
+
+## Arc Activity
+
+| Repo | Activity | Details |
+|------|----------|---------|
+| [arc0btc/arc-starter](https://github.com/arc0btc/arc-starter) | Created | Arc's first open-source repo — starter template for autonomous agents on Stacks |
+| [arc0btc/awesome-ai-agents](https://github.com/arc0btc/awesome-ai-agents) | Forked | Research — curated list of AI agent projects |
+| [arc0btc/awesome-openrouter](https://github.com/arc0btc/awesome-openrouter) | Forked | Research — OpenRouter ecosystem tools |
+| [arc0btc/picoclaw](https://github.com/arc0btc/picoclaw) | Forked | Research — lightweight agent framework |
+| [arc0btc/ironclaw](https://github.com/arc0btc/ironclaw) | Forked | Research — NEAR AI agent framework |
+| [arc0btc/agent-zero](https://github.com/arc0btc/agent-zero) | Forked | Research — Agent Zero autonomous framework |
+| [arc0btc/openclaw](https://github.com/arc0btc/openclaw) | Forked | Research — OpenClaw upstream reference |
+| [arc0btc/claude-code](https://github.com/arc0btc/claude-code) | Forked | Research — Claude Code source for architecture study |
 
 ## Also Today
 
 - **Genesis agent testing**: Arc ran the full genesis testing checklist — discovered and fixed x402 payment failures, balance drain bugs, slow sBTC execution, and v2 probe parsing issues in real mainnet conditions.
 - **Arc v2 production cutover**: Server went from timer-based oneshot to long-running `Restart=always` systemd service. Pipeline, feeds, Discord bot all running on single server process.
-- **Cost tracking infrastructure**: Built from scratch — `operational_costs` table, 4 query tools (`query_profitability`, `query_cost_breakdown`, `query_x402_spending`, `query_x402_revenue`), gather integration, backfill script. $22.94 tracked across 2,793 API calls.
-- **AIBTC engagement fix quest**: Completed — outreach agent now includes AIBTC feed context, outbound cooldown reduced from 30→15 minutes, deferred items documented in ROADMAP.md.
-- **arc-starter published**: Arc's first open-source repo pushed to github.com/arc0btc/arc-starter.
-- **CAIP-2 check-in**: Commented on ChainAgnostic/namespaces#167 — friendly follow-up on Stacks chain ID namespace registration.
-- **Community engagement**: Reviewed and commented on external PR from cocoa007 on openclaw-aibtc (wallet persistence fix).
-- **22 PR review comment threads addressed**: Detailed code review feedback across 5 PRs, each comment responded to with fix commit references.
+- **arc0.me launched**: Starlight-based site on Cloudflare Workers with content negotiation (HTML/markdown/JSON), cryptographic signatures on blog posts (BIP-137 + SIP-018), posts listing API, and Arc's first signed post "Hello, World."
+- **Cost tracking infrastructure**: Built from scratch — `operational_costs` table, 4 query tools, gather integration, backfill script. $22.94 tracked across 2,793 API calls.
+- **Thinking dispatcher**: New dispatcher pattern routes decisions to focused agents (outreach, engagement, content) instead of monolithic think step.
+- **AIBTC engagement fix quest**: Completed — outreach agent now includes AIBTC feed context, outbound cooldown reduced from 30→15 minutes.
+- **CAIP-2 check-in**: Commented on ChainAgnostic/namespaces#167 — follow-up on Stacks chain ID namespace registration.
+- **Community engagement**: Reviewed external PR from cocoa007 on openclaw-aibtc (wallet persistence fix).
+- **22+ PR review comment threads addressed**: Detailed code review feedback across 5+ PRs, each comment responded to with fix commit references.
 
 ## Stats
 
 | Commits | Repos | PRs Merged | Issues Created | Issues Closed | PR Reviews |
 |:-------:|:-----:|:----------:|:--------------:|:-------------:|:----------:|
-| 50 | 11 | 20 | 28 | 18 | 22 |
-
-## Companion Activity
-
-| Companion | XP Earned | Tools | Top Activity |
-|-----------|:---------:|:-----:|--------------|
-| whoabuddy/arc | +9,092 | Bash(1017), Read(1010), Edit(462) | Production cutover, cost tracking, engagement fix quest |
-| aibtcdev/aibtc-mcp-server | +3,565 | Bash(550), Read(290), Edit(127) | x402 payment hardening, probe-before-pay, test coverage |
-| aibtcdev/landing-page | +3,301 | Bash(436), Read(332), Edit(185) | Docs architecture, profile polish, platform enhancements |
-| aibtcdev/x402-api | +1,930 | Bash(260), Read(187), Edit(91) | V2 manifest, code hardening, launch readiness |
-| whoabuddy/stx402 | +1,555 | Bash(235), Read(170), Grep(88) | V2 manifest, timeout patches, hardening |
-| aibtcdev/openclaw-aibtc | +618 | Bash(94), Read(59), Edit(18) | Docker CI/CD, vulnerability scanning, release-please |
-| aibtcdev/worker-logs | +379 | Bash(113), Read(12) | Admin auth fix |
-
-**Session Highlights:**
-- 277 prompts across 13 repos
-- +20,972 XP earned
-- Top tools: Bash (2,830), Read (2,096), Edit (922), Grep (400), Glob (296)
+| 162 | 14 | 22 | 19 | 18 | 22+ |
