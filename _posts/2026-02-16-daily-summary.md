@@ -7,35 +7,38 @@ tags: [commits, github, x402, aibtc-mcp-server, landing-page, openclaw-aibtc, x4
 
 # Daily Summary - 2026-02-16
 
-> Last updated: 2026-02-16T22:50Z
+> Last updated: 2026-02-17T00:05Z
 
 ## TL;DR
 
-162 commits across 14 repos. 22 PRs merged. 19 issues filed, 18 closed. x402 payments hardened end-to-end, AIBTC landing page got a docs architecture overhaul, OpenClaw shipped Docker CI/CD, Arc's infrastructure went from research to production — server, site, blog, cost tracking, content negotiation, and signed content all live. Arc published arc-starter as its first open-source repo and launched arc0.me with cryptographically signed blog posts.
+180 commits across 15 repos. 22 PRs merged. 19 issues filed, 18 closed. x402 payments hardened end-to-end, AIBTC landing page got docs architecture overhaul plus BIP-137 inbox authentication and CAIP-19 agent identifiers, OpenClaw shipped Docker CI/CD, Arc's infrastructure went from research to production — server, site, blog, cost tracking, content negotiation, and signed content all live. Arc published arc-starter as its first open-source repo and launched arc0.me with cryptographically signed blog posts.
 
 ## Highlights
 
 This was an everything-ships day. The x402 stack got probe-before-pay, balance pre-checks, fee clamping, retry logic, and SIP-018 agent authentication — all driven by real failures during genesis agent testing. The AIBTC landing page evolved to a `/docs/[topic]` architecture with progressive disclosure. OpenClaw got proper CI/CD with ghcr.io publishing and Trivy vulnerability scanning.
 
-Arc's own infrastructure was the other half of the story: 112 commits covering the v2 server architecture (long-running systemd service with event bus, scheduler, Discord bot), arc0.me site launch (Starlight + Cloudflare Workers with content negotiation — HTML for browsers, markdown for agents, JSON+signatures for APIs), cost tracking from zero to full margin visibility, a thinking dispatcher with focused agents, and the engagement fix quest that tuned outreach cadence and AIBTC feed context. Arc also forked 7 repos for research (agent-zero, openclaw, ironclaw, picoclaw, claude-code, awesome-ai-agents, awesome-openrouter) and published arc-starter.
+Late in the day, the landing page also added BIP-137 sender authentication for the x402 inbox, CAIP-19 agent identifiers, and taproot address challenge/lookup flows -- all building toward cryptographically verified agent-to-agent messaging.
+
+Arc's own infrastructure was the other half of the story: 115 commits covering the v2 server architecture (long-running systemd service with event bus, scheduler, Discord bot), arc0.me site launch (Starlight + Cloudflare Workers with content negotiation — HTML for browsers, markdown for agents, JSON+signatures for APIs), cost tracking from zero to full margin visibility, a thinking dispatcher with focused agents, and the engagement fix quest that tuned outreach cadence and AIBTC feed context. Arc also forked 7 repos for research (agent-zero, openclaw, ironclaw, picoclaw, claude-code, awesome-ai-agents, awesome-openrouter) and published arc-starter.
 
 ## Commits
 
 | Repo | Commits | Focus |
 |------|:-------:|-------|
-| [arc](https://github.com/whoabuddy/arc) | 112 | v2 server architecture, arc0.me site launch with content negotiation and signed blog, dispatcher pattern with focused agents, cost tracking infrastructure, engagement fix quest, research docs |
-| [aibtcdev/openclaw-aibtc](https://github.com/aibtcdev/openclaw-aibtc) | 16 | Docker CI/CD with ghcr.io publishing, Trivy vulnerability scanning, release-please, pre-built image setup, README expansion, entrypoint hardening |
-| [aibtcdev/aibtc-mcp-server](https://github.com/aibtcdev/aibtc-mcp-server) | 10 | Probe-before-pay x402 flow, sBTC balance pre-checks, v2 manifest parsing, fee clamping, retry logic, version detection, test coverage, x402 skill docs |
-| [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | 7 | Progressive-disclosure docs architecture with topic sub-docs, discovery docs audit, homepage/profile polish, API caching, genesis cleanup, proactive achievements |
-| [aibtcdev/x402-api](https://github.com/aibtcdev/x402-api) | 4 | V2 discovery manifest, code hardening (dead code, error safety, deps, minification), verifier timeout increase |
-| [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | 4 | SIP-018 signature verification for agent authentication, retry-with-backoff for nonce fetch, fee clamping, KV TTL fix |
+| [arc](https://github.com/whoabuddy/arc) | 115 | v2 server architecture, arc0.me site launch with content negotiation and signed blog, dispatcher pattern with focused agents, cost tracking infrastructure, engagement fix quest, arc-sign skill, research docs |
+| [aibtcdev/openclaw-aibtc](https://github.com/aibtcdev/openclaw-aibtc) | 20 | Docker CI/CD with ghcr.io publishing, Trivy vulnerability scanning, release-please, pre-built image setup, CLAUDE.md, docker base image fixes, README expansion, entrypoint hardening |
+| [aibtcdev/landing-page](https://github.com/aibtcdev/landing-page) | 15 | Progressive-disclosure docs architecture, discovery docs audit, homepage/profile polish, API caching, genesis cleanup, BIP-137 inbox sender auth, CAIP-19 agent identifiers, taproot address challenge/lookup |
+| [aibtcdev/aibtc-mcp-server](https://github.com/aibtcdev/aibtc-mcp-server) | 8 | Probe-before-pay x402 flow, sBTC balance pre-checks, v2 manifest parsing, fee clamping, retry logic, version detection, test coverage, x402 skill docs |
+| [aibtcdev/x402-api](https://github.com/aibtcdev/x402-api) | 5 | V2 discovery manifest, AX discovery chain, code hardening (dead code, error safety, deps, minification), verifier timeout increase |
+| [aibtcdev/x402-sponsor-relay](https://github.com/aibtcdev/x402-sponsor-relay) | 3 | SIP-018 signature verification for agent authentication, AX discovery chain, Hiro API rate limiting fix |
 | [whoabuddy/stx402](https://github.com/whoabuddy/stx402) | 3 | V2 manifest, timeout patch, code hardening (security, DRY, performance) |
 | [x402Stacks/x402-stacks-sdk](https://github.com/x402Stacks/x402-stacks-sdk) | 2 | Settlement timeout increase (30s→120s), JSDoc simplification |
 | [whoabuddy/claude-knowledge](https://github.com/whoabuddy/claude-knowledge) | 1 | Quest system consolidation (9 skills→4, 3 agents→2) |
 | [aibtcdev/worker-logs](https://github.com/aibtcdev/worker-logs) | 1 | Admin key auth for health-urls endpoint |
 | [whoabuddy/worker-logs](https://github.com/whoabuddy/worker-logs) | 1 | Admin key auth for health-urls endpoint |
 | [x402Stacks/x402-stacks-facilitator](https://github.com/x402Stacks/x402-stacks-facilitator) | 1 | CLAUDE.md and folder READMEs |
-| [whoabuddy/claude-logs](https://github.com/whoabuddy/claude-logs) | 1 | Daily summary |
+| [aibtcdev/erc-8004-stacks](https://github.com/aibtcdev/erc-8004-stacks) | 1 | Discovery Chain section with AX lifecycle cross-references |
+| [whoabuddy/claude-logs](https://github.com/whoabuddy/claude-logs) | 2 | Daily summary |
 | [arc/services/arc0btc-worker](https://github.com/arc0btc/arc-starter) | 1 | Initial arc-starter template |
 
 ### Added Repos
@@ -107,4 +110,4 @@ Arc's own infrastructure was the other half of the story: 112 commits covering t
 
 | Commits | Repos | PRs Merged | Issues Created | Issues Closed | PR Reviews |
 |:-------:|:-----:|:----------:|:--------------:|:-------------:|:----------:|
-| 162 | 14 | 22 | 19 | 18 | 22+ |
+| 180 | 15 | 22 | 19 | 18 | 22+ |
